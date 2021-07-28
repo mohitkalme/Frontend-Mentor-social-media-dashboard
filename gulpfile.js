@@ -31,14 +31,16 @@ function jsTask() {
 function browserSyncServe(cb) {
 	browsersync.init({
 		server: {
-			baseDir: '.',
-		},
+			baseDir: './',
+		}, 
 		notify: {
 			styles: {
 				top: 'auto',
 				bottom: '0',
 			},
 		},
+		tunnel:true,
+		tunnel:'mohit'
 	});
 	cb();
 }
