@@ -8,6 +8,7 @@ const babel = require('gulp-babel');
 const terser = require('gulp-terser');
 const browsersync = require('browser-sync').create();
 
+
 // Use dart-sass for @use
 // sass.compiler = require('dart-sass');
 
@@ -32,18 +33,18 @@ function browserSyncServe(cb) {
 	browsersync.init({
 		server: {
 			baseDir: './',
-		}, 
-		notify: {
-			styles: {
-				top: 'auto',
-				bottom: '0',
-			},
 		},
-		tunnel:true,
-		tunnel:'mohit'
+		notify:{
+			styles:{
+				top:'0',
+				bottom:'auto',
+			},
+		}
 	});
 	cb();
 }
+
+
 function browserSyncReload(cb) {
 	browsersync.reload();
 	cb();
