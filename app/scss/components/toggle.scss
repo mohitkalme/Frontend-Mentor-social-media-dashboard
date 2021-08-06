@@ -1,11 +1,79 @@
 @use '../util' as *;
 
-.toggle{
+.toggle {
+  border: none;
 
-    &__buttton{
-        width: rem(16);
-        height: rem(16);
-        border-radius: 50%;
-        background-color: var(--toggle);
+  label {
+    &[for="Dark"] {
+      color: var(--dark-text1);
+      font-weight: 700;
+      margin: 0 0.5rem 0;
+      cursor: pointer;
     }
+  }
+
+  &__wrapper {
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 48px;
+    height: rem(24);
+
+    border-radius: rem(24); /* = height */
+
+    position: relative;
+  }
+
+  input[type="radio"] {
+    display: inline-block;
+    margin-right: -2px;
+    width: rem(16);
+    height: 100%;
+    opacity: 0;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  
+
+  &__background {
+    display: block;
+    height: 100%;
+    border-radius: rem(12);
+    background: linear-gradient(
+      225deg,
+      var(--toggle-bg-end) 0%,
+      var(--toggle-bg-start) 98.02%
+    );
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 0;
+
+    transition: all 0.1s ease-out;
+  }
+
+  &__button {
+    background-color: var(--dark-top-bg);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    width: 50%;
+    height: 100%;
+    border: 1px solid var(--toggle);
+    border-radius: 50%;
+    transition: all 0.1s ease-out;
+    z-index: 2;
+  }
+
+  #dark:checked ~ .toggle__button {
+    right: 0;
+    left: 50%;
+  }
 }
