@@ -10,6 +10,10 @@
     }
      &__title{
 
+        @include breakpoint-down(small){
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid hsl(228, 28%, 20%);
+        }
      }
 
      &__subtitle{
@@ -21,4 +25,7 @@
      &__toggle{
 
      }
+
+    
 }
+
