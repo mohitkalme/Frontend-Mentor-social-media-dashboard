@@ -1,31 +1,27 @@
 @use '../util' as *;
-@use'../globals/colors.scss' ;
+@use '../globals/colors.scss';
 
-.header{
-    margin-top: rem(36);
-    @include breakpoint(medium){
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+.header {
+  margin-top: rem(36);
+  @include breakpoint(medium) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    @include breakpoint-down(small) {
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid hsl(228, 28%, 20%);
     }
-     &__title{
+  }
 
-        @include breakpoint-down(small){
-            padding-bottom: 1.2rem;
-            border-bottom: 1px solid hsl(228, 28%, 20%);
-        }
-     }
+  &__subtitle {
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--text-color-subheading);
+  }
 
-     &__subtitle{
-        font-size: rem(14);
-        font-weight: 700;
-        color: var(--dark-text1);
-     }
-
-     &__toggle{
-
-     }
-
+  &__toggle {
     
+  }
 }
-

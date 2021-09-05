@@ -5,12 +5,14 @@ html{
 
 *, *::before, *::after{
     box-sizing: inherit;
+  --webkit-tap-highlight-color: transparent;
+  transition: color 0.3s ease-out, background-color 0.3s ease-out;
 }
 
 body{
     margin: 0;
     padding: 0;
     font-family: var(--font-inter);
-    background: var(--dark-bg);
-    color: var(--dark-text2);
+    background: var(--background);
+    color: var(--text-color);
 }
