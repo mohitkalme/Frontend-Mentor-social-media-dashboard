@@ -26,7 +26,7 @@
     overflow: hidden;
     transition: background 100ms ease-in-out;
     cursor: pointer;
-
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
 
     &:hover{
         background: var(--card-hover-background);;
@@ -114,10 +114,6 @@
         &--big{
             font-size: rem(56);
         }
-
-        &--small{
-
-        }
     }
 
     &__label{
@@ -176,13 +172,14 @@
     
 
     &__card{
-        background: var(--card-background);
         color: var(--text-color-subheading);
         padding: rem(25);
         border-radius: rem(5);
         transition: background 100ms ease-in-out;
         cursor: pointer;
-
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px -2px, rgba(0, 0, 0, 0.14) 0px 3px 4px 0px, rgba(0, 0, 0, 0.12) 0px 1px 8px 0px;
+        background: var(--card-background);
+        
         &:hover{
            background: var(--card-hover-background);
        }

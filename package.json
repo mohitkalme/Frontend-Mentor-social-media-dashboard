@@ -14,9 +14,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mohitkalme/SocialMedia_Dashboard/issues"
+    "url": "https://github.com/mohitkalme/Frontend-Mentor-social-media-dashboard/issues"
   },
-  "homepage": "https://github.com/mohitkalme/SocialMedia_Dashboard#readme",
+  "homepage": "https://github.com/mohitkalme/Frontend-Mentor-social-media-dashboard/blob/master/README.md",
   "dependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
